@@ -1,0 +1,27 @@
+{
+    "name": "@WCC_HentaiBot",
+    "repository": "https://github.com/Nikarshu/hentai_botto",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "telegram bot token here",
+            "required": true
+        },        
+        "API_ID": {
+            "description": "telegram api id here",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "telegram api hash here",
+            "required": true
+        }
+    },
+    "buildpacks": [       
+        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+        {"url": "heroku/python"}
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ]
+}
